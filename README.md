@@ -1,8 +1,9 @@
------------------------------------------------------
 # RabbitCMS Plugin Oluşturma Dökümanı
 ## RabbitCMS Version => @5.4.0
+
 -----------------------------------------------------
 [RabbitCMS Plugin Template Git](https://github.com/RabbitCMS-Hub/RabbitCMS-Plugin-Template)
+-----------------------------------------------------
 
 # RabbitCMS Plugin (Eklenti) Nedir?
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in elit eget lectus imperdiet gravida sit amet euismod magna. Sed rhoncus, dolor quis porttitor placerat, velit orci tincidunt dui, vitae maximus magna turpis sit amet est. Nunc at feugiat ipsum, vel euismod erat. Sed facilisis finibus eros nec aliquet. Ut fermentum, leo sit amet pellentesque maximus, sapien diam eleifend dui, a molestie mi est in dolor. Aenean ac rhoncus tortor. Vestibulum sed varius lectus, non fermentum magna. Sed vitae quam nibh. In ut orci mauris. Ut consequat, arcu id sagittis pretium, enim orci imperdiet velit, ac pretium eros felis pretium nunc. Fusce quis risus mi.
