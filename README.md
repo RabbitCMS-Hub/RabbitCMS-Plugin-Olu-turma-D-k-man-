@@ -210,19 +210,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in elit eget le
 ### Örnek Kullanım
 Eklentiniz içinde harici bir HTTP isteği oluşturmak için **HTTPRequestHelper** sınıfını kullanabilirsiniz. CORS sorunu yaşamamak için bu sınıfa entegre edilmiş bir Cors Proxy server yardımcısı da mevcuttur. 
 
-|Nitelik|Veri Türü|Seçenekler|Açıklama|
-|--|:--:|--|--|
-|CorsProxy=|Boolean|True, False|Loremipsumdolor|
-|Method=|String|POST, GET, PUT, DELETE, OPTIONS|Loremipsumdolor|
-|Auth=|Boolean <> String|Header Başlığı|Header Başlığı olarak kullanılır. Auth kullanılmayacaksa False gönderilir.|
-|AuthValue=|String|-|Auth başlığının değeri olarak belirlenir. Auth=False ise boştur.|
-|Url=|String|-|İstek yapılacak URL adresi. HTTPS ile başlamalıdır.|
-|Data=|String, Object|-|İstek ile gönderilecek veri tanımlayıcısıdır.|
-|Send()|-|-|İsteği başlatır.|
-|Status()|Int|-|HTTP isteği için karşı sunucudan alınan HTTP Status kodunu döner. Send() komutundan sonra kullanılır.|
-|Result()|String|-|HTTP isteği için karşı sunucudan alından Text cevabı döner. Send() komutundan sonra kullanılır.|
-|CorsStatus()|Boolean|True, False|CORS Sunucusunun aktif olarak kullanılıp kullanılmadığını döner. Send() komutundan sonra kullanılır.|
-|Header(Key)|String|-|HTTP isteği sonucunda gelen Header verilerini alır. Send() komutundan sonra kullanılır.|
+|Nitelik|Veri Türü|Seçenekler|Varsayılan|Açıklama|
+|--|:--:|--|--|--|
+|CorsProxy=|Boolean|True, False|False|İstek öncesinde Cors Proxy'nin kullanımını ayarlar. True, Cors Proxy kullanır.|
+|Method=|String|POST, GET, PUT, DELETE, OPTIONS|GET|HTTP isteği için method'u belirler.|
+|Auth=|String|Header Başlığı|False|Header Başlığı olarak kullanılır. Auth kullanılmayacaksa False gönderilir.|
+|AuthValue=|String|-|Null|Auth başlığının değeri olarak belirlenir. Auth=False ise boştur.|
+|Url=|String|-|Null|İstek yapılacak URL adresi. HTTPS ile başlamalıdır.|
+|Data=|String, Object|-|Null|İstek ile gönderilecek veri tanımlayıcısıdır.|
+|Send()|-|-||İsteği başlatır.|
+|Status()|Int|-||HTTP isteği için karşı sunucudan alınan HTTP Status kodunu döner. Send() komutundan sonra kullanılır.|
+|Result()|String|-||HTTP isteği için karşı sunucudan alından Text cevabı döner. Send() komutundan sonra kullanılır.|
+|CorsStatus()|Boolean|True, False|False|CORS Sunucusunun aktif olarak kullanılıp kullanılmadığını döner. Send() komutundan sonra kullanılır.|
+|Header(Key)|String|-||HTTP isteği sonucunda gelen Header verilerini alır. Send() komutundan sonra kullanılır.|
 
 <details>
 	<summary>
