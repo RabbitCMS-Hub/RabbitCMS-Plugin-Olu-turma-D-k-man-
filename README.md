@@ -205,8 +205,7 @@ QuickSettings yordamını farklı inputlar oluşturmak için kullanabilirsiniz. 
 ## Eklenti Paneli (Panels)
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in elit eget lectus imperdiet gravida sit amet euismod magna. Sed rhoncus, dolor quis porttitor placerat, velit orci tincidunt dui, vitae maximus magna turpis sit amet est. Nunc at feugiat ipsum, vel euismod erat. Sed facilisis finibus eros nec aliquet. Ut fermentum, leo sit amet pellentesque maximus, sapien diam eleifend dui, a molestie mi est in dolor. Aenean ac rhoncus tortor. Vestibulum sed varius lectus, non fermentum magna. Sed vitae quam nibh. In ut orci mauris. Ut consequat, arcu id sagittis pretium, enim orci imperdiet velit, ac pretium eros felis pretium nunc. Fusce quis risus mi.
 
-## HTTP Request 
-
+## HTTP İsteği (HTTP Request)
 ### Örnek Kullanım
 Eklentiniz içinde harici bir HTTP isteği oluşturmak için **HTTPRequestHelper** sınıfını kullanabilirsiniz. CORS sorunu yaşamamak için bu sınıfa entegre edilmiş bir Cors Proxy server yardımcısı da mevcuttur. 
 
@@ -234,22 +233,19 @@ Eklentiniz içinde harici bir HTTP isteği oluşturmak için **HTTPRequestHelper
 Set HTTPRequest = New HTTPRequestHelper
     HTTPRequest.CorsProxy   = True
     HTTPRequest.Method      = "GET"
-    HTTPRequest.Auth        = False '"Authorization" 
-    HTTPRequest.AuthValue   = "" ' "Bearer"
+    HTTPRequest.Auth        = "Authorization" 
+    HTTPRequest.AuthValue   = "Bearer xxxx-TOKEN-KEY-xxxx-xxxx"
     HTTPRequest.Url         = "https://api.github.com/repos/RabbitCMS-Hub/gtmetrix-blocker-plugin/releases/latest"
     HTTPRequest.Data        = ""
     HTTPRequest.Send()
     
-    Dim Results, Status
-        Status      = HTTPRequest.Status() 
-        Results     = HTTPRequest.Result()
-        CorsStatus  = HTTPRequest.CorsStatus()
-
-    Response.Write "<h5>HTTP Status: "& Status &"</h5>"
-    Response.Write "<h5>Cors Status: "& CorsStatus &"</h5>"
+    Response.Write "<h5>HTTP Status: "& HTTPRequest.Status()  &"</h5>"
+    Response.Write "<h5>Cors Status: "& HTTPRequest.CorsStatus() &"</h5>"
     Response.Write "<h5>HEADER: "& HTTPRequest.Header("served-by") &"</h5>"
+    Response.Write "<h5>HEADER: "& HTTPRequest.Header("content-type") &"</h5>"
     Response.Write "<h5>URL: "& HTTPRequest.Url() &"</h5>"
-    Response.Write Results
+    Response.Write "<pre>"& HTTPRequest.Result() &"</pre>"
+
 Set HTTPRequest = Nothing
 %>
 ```
