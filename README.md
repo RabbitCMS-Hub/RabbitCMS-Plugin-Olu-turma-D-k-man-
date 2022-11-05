@@ -6,9 +6,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in elit eget le
 
 ## 01/11/2022 @1.0.0
 - [x] Plugin yapısı oluşturuldu.
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
+- [x] CMS Hooks özelliği eklendi.
+- [x] HTTPRequest özelliği eklendi.
+- [x] HTTPRequest özelliği için CORS Proxy kullanımı eklendi.
