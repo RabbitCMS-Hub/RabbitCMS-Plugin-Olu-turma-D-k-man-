@@ -211,7 +211,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in elit eget le
 Eklentiniz içinde harici bir HTTP isteği oluşturmak için **HTTPRequestHelper** sınıfını kullanabilirsiniz. CORS sorunu yaşamamak için bu sınıfa entegre edilmiş bir Cors Proxy server yardımcısı da mevcuttur. 
 
 |Nitelik|Veri Türü|Seçenekler|Açıklama|
-|:--:|--|--|
+|--|:--:|--|--|
 |CorsProxy=|Boolean|True, False|Loremipsumdolor|
 |Method=|String|POST, GET, PUT, DELETE, OPTIONS|Loremipsumdolor|
 |Auth=|Boolean <> String|Header Başlığı|Header Başlığı olarak kullanılır. Auth kullanılmayacaksa False gönderilir.|
